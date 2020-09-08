@@ -1,4 +1,4 @@
-# Keep-on-Closing #
+# Keep On Closing #
 
 This was a project from a course on Multiple Linear Regression (a supervised machine learning technique for quantitative analysis). Below is the prompt from the client:
 
