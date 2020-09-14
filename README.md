@@ -5,7 +5,7 @@ This was an individual project from a course on Multiple Linear Regression (a su
 
 > Hello! I hope this message finds you well! After our last project predicting house prices was so successful, I thought we could work on a follow up project. Since the last time I have collected more data to improve the model to predict house prices. It was clear that I needed at least one other predictor, so I decided to start recording the style of architecture of each property. I specialize in three types of Architectures: Craftsman, Queen Anne, and Victorian. The new data that I collected is in the attached data file.
 > 
-> In our last project we verified how much the square footage of the house affects the price of the property, but I don't know how this relationship is affected when we take the architecture style into consideration. I would like to better understand how both the square footage and the style of the house affects the price so that I can better target specific homes to make the most profit on a sale. Can you help me to better understand how both of these variables affect the Price of these properties?
+> In our last project we verified how much the square footage of the house affects the price of the property, but I don't know how this relationship is affected when we take the architecture style into consideration. I would like to better understand how both the square footage and the style of the house affects the price so that I can better target specific homes to make the most profit on a sale. Can you help me to better understand how both variables affect the Price of these properties?
 
 [Please click here to visit the previous project with this client!](https://github.com/SagarBansal7/Always-Be-Closing)
 
@@ -31,7 +31,7 @@ I produced three box plots of Price variable for each of the architectural type 
 
 Moreover, I also generated a scatter plot with Price on Y-axis, Sqft on X-axis and data points colored by Type variable (see Figure 2). I noticed that Sqft can have a positive linear correlation with the response so I included it in the model. Interestingly, when I added reference line for each of the three type of houses in the scatter plot, I found that all of them suggests a linear correlation with the response. Also, it was visible that reference lines are slanted to each other (different slopes). In other words, it showed different house types may change the relationship between square footage and house prices differently. It motivated me to further investigate this effect by including interaction terms between these two variables in the model. 
 
-#### Figure 2: Scatter plot – Price vs Sqft (Coloured by Type)
+#### Figure 2: Scatter plot – Price vs Sqft (Colored by Type)
 
 ![Figure 2](https://user-images.githubusercontent.com/37155988/93031709-05230900-f5fb-11ea-84df-5d7e9df6e8df.png)
 
