@@ -1,7 +1,7 @@
 # Keep On Closing #
 ## Graduate Course: Quantitative Analysis for Business
 
-This was a project from a course on Multiple Linear Regression (a supervised machine learning technique for quantitative analysis). Below is the prompt from the client:
+This was an individual project from a course on Multiple Linear Regression (a supervised machine learning technique for quantitative analysis). Below is the prompt from the client:
 
 > Hello! I hope this message finds you well! After our last project predicting house prices was so successful, I thought we could work on a follow up project. Since the last time I have collected more data to improve the model to predict house prices. It was clear that I needed at least one other predictor, so I decided to start recording the style of architecture of each property. I specialize in three types of Architectures: Craftsman, Queen Anne, and Victorian. The new data that I collected is in the attached data file.
 > 
@@ -13,13 +13,33 @@ This was a project from a course on Multiple Linear Regression (a supervised mac
 
 #### 1) Understanding the relationships:
 
-To understand how the relationship of square footage with house price will change after taking architecture style into consideration, we started with some data exploration to see if we have any evidence to believe that architecture style can be correlated with the House price. We have used Architecture Style and Type interchangeably in the report. Also, numerical summaries of the variables can be found in Table 1 and 2 in the Appendix. 
+To understand how the relationship of square footage with house price will change after taking architecture style into consideration, I started with some data exploration to see if I have any evidence to believe that architecture style can be correlated with the House price. I have used Architecture Style and Type interchangeably in the report. Also, numerical summaries of the variables can be found in Table 1 and 2 below.
 
-We produced three box plots of Price variable for each of the architectural type and noticed that all three boxplots are considerably different from each other (see Figure 1 in Appendix). Each box plot gives us a sense of the Price distribution by showing us the minimum, first quartile below which 25% of the data lies, median below which half of the data lies, third quartile below which 75% of the data lies and maximum values of the Price for a particular architecture type. From the box plots, we found that the median price of Victoria type is highest, followed by the median price of Craftsman type and then, the median price of Queen Anne type. Similar sequences were observed for minimum, maximum, first and third quartile values of the Price among the three types. This gave us a strong indication that the type variable can be correlated with our response variable so we decided to include the variable term in our model. 
+#### Table 1: Descriptive Statistics - Price and Sqft
 
-Moreover, we also generated a scatter plot with Price on Y-axis, Sqft on X-axis and data points colored by Type variable (see Figure 2 in Appendix). We noticed that Sqft can have a positive linear correlation with our response so we agreed to include it in our model. Interestingly, when we added reference line for each of the three type of houses in the scatter plot, we found that all of them suggests a linear correlation with the response. Also, it was visible that reference lines are slanted to each other (different slopes). In other words, it showed different house types may change the relationship between square footage and house prices differently. It motivated us to further investigate this effect by including interaction terms between these two variables in the model. 
+![Table 1](https://user-images.githubusercontent.com/37155988/93031712-05bb9f80-f5fb-11ea-8dd7-bbd6a09c0568.png)
 
-After estimating the coefficients, we revealed three important correlations of Square Footage and Architecture Type with House Price according to our model (see Table 5 in Appendix). First, a 100 unit increase in the Square footage is associated with 3251.20 dollars increase in the average house price for Queen Anne house types. Second, a 100 unit increase in the Square footage is associated with 12907.5 dollars increase in the average house price for Craftsman house types. Third, a 100 unit increase in the Square footage is associated with 22569.30 dollars increase in the average house price for Victorian house types.    
+#### Table 2: Descriptive Statistics - Type
+
+![Table 2](https://user-images.githubusercontent.com/37155988/93031714-05bb9f80-f5fb-11ea-88e5-b7418f697e51.png)
+
+I produced three box plots of Price variable for each of the architectural type and noticed that all three boxplots are considerably different from each other (see Figure 1). Each box plot gives us a sense of the Price distribution by showing us the minimum, first quartile below which 25% of the data lies, median below which half of the data lies, third quartile below which 75% of the data lies and maximum values of the Price for a particular architecture type. From the box plots, we found that the median price of Victoria type is highest, followed by the median price of Craftsman type and then, the median price of Queen Anne type. Similar sequences were observed for minimum, maximum, first and third quartile values of the Price among the three types. This gave us a strong indication that the type variable can be correlated with our response variable so we decided to include the variable term in our model. 
+
+#### Figure 1: Box plot – Price vs Architecture Type
+
+![Figure 1](https://user-images.githubusercontent.com/37155988/93031708-05230900-f5fb-11ea-95a8-44e7a959c342.png)
+
+Moreover, we also generated a scatter plot with Price on Y-axis, Sqft on X-axis and data points colored by Type variable (see Figure 2). We noticed that Sqft can have a positive linear correlation with our response so we agreed to include it in our model. Interestingly, when we added reference line for each of the three type of houses in the scatter plot, we found that all of them suggests a linear correlation with the response. Also, it was visible that reference lines are slanted to each other (different slopes). In other words, it showed different house types may change the relationship between square footage and house prices differently. It motivated us to further investigate this effect by including interaction terms between these two variables in the model. 
+
+#### Figure 2: Scatter plot – Price vs Sqft (Coloured by Type)
+
+![Figure 2](https://user-images.githubusercontent.com/37155988/93031709-05230900-f5fb-11ea-84df-5d7e9df6e8df.png)
+
+After estimating the coefficients, we revealed three important correlations of Square Footage and Architecture Type with House Price according to our model (see Table 5). First, a 100 unit increase in the Square footage is associated with 3251.20 dollars increase in the average house price for Queen Anne house types. Second, a 100 unit increase in the Square footage is associated with 12907.5 dollars increase in the average house price for Craftsman house types. Third, a 100 unit increase in the Square footage is associated with 22569.30 dollars increase in the average house price for Victorian house types.    
+
+#### Table 5: Coefficients
+
+![Table 5](https://user-images.githubusercontent.com/37155988/93031718-06543600-f5fb-11ea-819c-b9559252c677.png)
 
 For the house types, the model estimates that the change in average house prices is roughly 14915.89 dollars higher for Victorian types than Queen Anne types when square footage is zero. In addition, the model estimates that the change in average house prices is 29749.83 dollars higher for Craftsman types than Queen Anne types when square footage is zero. Also, the average house price for Queen Anne house types is roughly 166596.77 dollars when square footage is set to zero. Please note that a house of zero square footage is practically infeasible. These values are theoretical to help the client understand the individual correlation of different house types with the house prices. In practice, we will always have some value of square footage for a particular house. 
 
